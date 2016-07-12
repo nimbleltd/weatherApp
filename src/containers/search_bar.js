@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchWeather} from '../actions/index';
 
 export default class SearchBar extends Component {
 	constructor(props) {
@@ -17,8 +20,8 @@ export default class SearchBar extends Component {
 
 	onFromSubmit(event) {
 		event.preventDefault();
+		//connect our search bar container and bind 'fetch_weather' to this container
 
-		// Go fetch Weather Data
 	}
 
 	render() {
