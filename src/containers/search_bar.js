@@ -17,6 +17,8 @@ export default class SearchBar extends Component {
 
 	onFromSubmit(event) {
 		event.preventDefault();
+
+		// Go fetch Weather Data
 	}
 
 	render() {
