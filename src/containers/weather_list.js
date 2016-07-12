@@ -4,6 +4,16 @@ import {connect} from 'react-redux';
 // import {fetchWeather} from '../actions/index';
 
 class WeatherList extends Component {
+	renderWeather(cityData){
+		const cityName = cityData.city.name
+
+		return (
+			<tr key={cityName}>
+				<td>{cityName}</td>
+			</tr>
+		);
+	}
+
 	render () {
 		return (
 			<table className="table table-hover">
@@ -16,6 +26,7 @@ class WeatherList extends Component {
 					</tr>
 				</thead>
 					<tbody>
+					{this.props.weather.map(this.renderWeather)}
 					</tbody>
 			</table>	
 		)
